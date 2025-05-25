@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Card</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      position: relative;
+      z-index: 0;
+    }
+
+    body::before {
+      content: "";
+      background-image: url(https://i.pinimg.com/736x/80/52/ed/8052edb2dcb77957ea26b6ff94cf9c6a.jpg);
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.5; 
+      z-index: -1;
+    }
+
+    .card {
+      width: 20rem;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      z-index: 1;
+    }
+
+    .card-title {
+      color:#000;
+      word-wrap: break-word;
+      
+    }
+
+    .subtitle {
+      font-weight: bold;
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      color: #747474;
+    }
+
+    .card-text {
+      color: #000;
+      margin-bottom: 1.2rem;
+    }
+
+    .btn-outline-secondary {
+      color: #6c757d;
+      border-color: #6c757d;
+    }
+
+    .btn-outline-secondary:hover {
+      background-color: #6c757d;
+      color: #fff;
+    }
+
+    @media screen and (max-width: 500px) {
+      .card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <img src="https://www.creative-tim.com/blog/content/images/2022/01/which-development-job-is-right-for-you.jpg"
+      class="card-img-top" alt="Developer">
+    <div class="card-body">
+      <h5 class="card-title">Vincent Blankson</h5>
+      <div class="subtitle">Frontend Developer</div>
+      <hr>
+      <p class="card-text">I build responsive and user-friendly websites to ensure clarity and satisfaction.</p>
+      <a href="#" class="btn btn-primary me-2">Follow</a>
+      <a href="#" class="btn btn-outline-secondary ms-2">Message</a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
